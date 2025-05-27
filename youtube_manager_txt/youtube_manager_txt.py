@@ -2,13 +2,13 @@ import json
 
 def load_data():
     try:
-        with open("youtube.tet", "r") as file:
+        with open("youtube.txt", "r") as file:
             return json.load(file)
     except FileNotFoundError:
         return []
 
 def save_data_helper(videos):
-    with open("youtube.tet", "w") as file:
+    with open("youtube.txt", "w") as file:
         json.dump(videos, file)
         return True
     
